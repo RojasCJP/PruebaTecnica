@@ -11,7 +11,7 @@ const Table3 = () => {
   }, []);
 
   return (
-    <Table>
+    <Table  striped bordered hover responsive>
       <thead>
           <tr>
             <th>ID</th>

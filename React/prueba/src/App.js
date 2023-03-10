@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Table } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 import Table1 from './tablas/tabla1';
 import Table2 from './tablas/tabla2';
