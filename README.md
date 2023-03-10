@@ -16,31 +16,28 @@ El proyecto no se dejo con la opcion de poder Agregar, Modificar y "Eliminar" en
 
 ## Que tipo de declaraciones de variables conoce y cuales son sus diferencias
 
-### var
-se utiliza para variables que tienen un alcance de funcion esto, quiere decir que solo pueden ser utilizadas en una funcion, estas variables pueden cambiar su valor
-### let
-se utiliza para variables que tienen un alcance de bloque esto, quiere decir que solo pueden ser utilizadas en un bloque de codigo, estas variables pueden cambiar su valor
-### const
-se utiliza unicamente para constantes, este valor no puede cambiar en el tiempo
+var: se utiliza para variables que tienen un alcance de función, esto quiere decir que solo pueden ser utilizadas en una función, estas variables pueden cambiar su valor.
+let: se utiliza para variables que tiene un alcance de bloque, esto quiere decir que solo pueden ser utilizadas en un bloque, estas variables pueden cambiar su valor.
+const: se utilizan únicamente para constantes, estas variables no pueden cambiar su valor.
+
 
 ## Que es la programacion sincrona y asincrona
 
-la programacion sincrona es aquella que sigue los pasos programados uno despues de otro, sin hacer procesos paralelos, mientras la programacion asincrona es aquella en la que ocurren varios procesos al mismo tiempo.
-Un ejemplo de programacion sincrona podria ser el recorrer un arreglo de manera ordenada, ya que no se avanzara en el arreglo hasta terminar la interacion anterior.
-Un ejemplo de programacion asincrona es consumir datos de una api, ya que mientras esta esta consumiendo los datos el programa puede estar ejecutando otros procesos.
-En resumen la programacion asincrona es cuando se utiliza paralelismo en la ejecucion de procesos.
+la programación síncrona es aquella que sigue los pasos programados uno después de otro, sin hacer procesos paralelos, mientras la programación asíncrona es aquella en la que ocurren varios procesos al mismo tiempo.
+Un ejemplo de programación síncrona podría ser el recorrer un arreglo de manera ordenada, ya que no se avanzará en el arreglo hasta terminar la interacción anterior.
+Un ejemplo de programación asíncrona es consumir datos de un api, ya que mientras esta está consumiendo los datos el programa puede estar ejecutando otros procesos.
+En resumen, la programación asíncrona es cuando se utiliza paralelismo en la ejecución de procesos.
+
 
 ## Que metodos para recorrer arreglos conoce y cuales son sus diferencias
 
-forEach() => este metodo itera sobre cada elemento del arreglo, y puede realizar una funcion con cada uno de los elementos.
+forEach() => este método itera sobre cada elemento del arreglo, y puede realizar una funcion con cada uno de los elementos.
+map() => este método recorre un arreglo y crea uno nuevo haciendo una acción en todos los objetos del arreglo original.
+filter() => esta recorre un arreglo y nos devuelve otro con los elementos que cumplan con la condición del filtro.
+Aunque no sea un método también puede recorrerse un arreglo utilizando únicamente for teniendo un comportamiento muy parecido a un forEach()
 
-map() => este metodo recorre un arreglo y crea uno nuevo haciendo una accion en todos los objetos del arreglo original.
-
-filter() => esta recorre un arreglo y nos devuelve otro con los elementos que cumplan con la condicion del filtro.
-
-Aunque no sea un metodo tambien puede recorrerse un arreglo utilizando unicamente for teniendo un comportamiento muy parecido a un forEach()
 
 ## Como eliminar un caracter especifico en un array
 
-Hay varias maneras, por ejepmlo podriamos utilizar filter haciendo que el caracter que querramos eliminar no cumpla con la condicion del filtro, pero tambien existen otras formas como por ejemplo la utilizacion de pop() o splice() que unicamente sirven para eliminar elementos de un arreglo segun su indice. (en el caso de pop siempre es el indice "-1").
+Hay varias maneras, por ejemplo podríamos utilizar filter haciendo que el carácter que queramos eliminar no cumpla con la condición del filtro, pero también existen otras formas como por ejemplo la utilización de pop() o splice() que únicamente sirven para eliminar elementos de un arreglo según su índice. (en el caso de pop siempre es el índice "-1").
 
