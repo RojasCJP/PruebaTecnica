@@ -23,7 +23,7 @@ se utiliza para variables que tienen un alcance de bloque esto, quiere decir que
 ### const
 se utiliza unicamente para constantes, este valor no puede cambiar en el tiempo
 
-## Que es laprogramacion sincrona y asincrona
+## Que es la programacion sincrona y asincrona
 
 la programacion sincrona es aquella que sigue los pasos programados uno despues de otro, sin hacer procesos paralelos, mientras la programacion asincrona es aquella en la que ocurren varios procesos al mismo tiempo.
 Un ejemplo de programacion sincrona podria ser el recorrer un arreglo de manera ordenada, ya que no se avanzara en el arreglo hasta terminar la interacion anterior.
