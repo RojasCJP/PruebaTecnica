@@ -2,13 +2,14 @@
 Prueba tecnica - Juan Pablo Rojas Chinchilla
 
 # Ejecucion
-Para le ejecucion del backend debe utilizarse el comando "npm run dev" o en su defecto compilar el codigo de typescript y correr el servidor con node como usualmente se hace. El archivo de ejecucion es Node/dist/index.js
+Para le ejecucion del backend debe utilizarse el comando "npm run dev" o en su defecto compilar el codigo de typescript y correr el servidor con node como usualmente se hace. El archivo de ejecucion es Node/dist/index.js.
+Para la ejecucion del frontend debe utilizarse el comando "npm start" en el directorio de React/prueba
 
 # Anotaciones
 En la prueba no pude terminar los delete, ya que tendria que hacerse una eliminacion en cascada dadas las relaciones utilizadas, estas relaciones se utilizaron de esta manera por motivos de no tener datos repetidos en base de datos
 
 # Consideraciones
-En caso no se termine el proyecto fue por limites de tiempo, ya que debia entregarse el programa realizado en un unico dia, dado que trabajo esta tarea solo fue realizada despues de mi horario laboral al igual que los test psicometricos.
+El proyecto no se dejo con la opcion de poder Agregar, Modificar y "Eliminar" en la interfaz grafica por falta de tiempo, estos metodos estan realizados en la parte de backend, ya que pueden realizarse las peticiones por medio de postman o alguna herramienta para hacer peticiones POST y PUT, al editar la base de datos este cambio se vera reflejado en el servidor de react, la base de datos utilizada fue MySQL.
 
 
 # Preguntas prueba tecnica 
