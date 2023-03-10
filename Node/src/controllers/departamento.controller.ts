@@ -40,12 +40,3 @@ export async function updateDepartamento(req: Request, res: Response): Promise<R
     message: 'Departamento Updated'
   });
 }
-
-export async function deleteDepartamento(req: Request, res: Response): Promise<Response> {
-  const id = req.params.departamentoId;
-  const conn = await connect();
-  await conn.query('DELETE FROM departamento WHERE id = ?', [id]);
-  return res.json({
-    message: 'Departamento Deleted'
-  });
-}

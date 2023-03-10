@@ -3,7 +3,12 @@ import morgan from 'morgan'
 
 // Routes
 import IndexRoutes from './routes/index.routes'
-import PostRoutes from './routes/post.routes'
+import CategoriaRoutes from './routes/categoria.routes'
+import DepartamentoRoutes from './routes/departamento.routes'
+import MunicipioRoutes from './routes/municipio.routes'
+import ProductoRoutes from './routes/producto.routes'
+import SucursalRoutes from './routes/sucursal.routes'
+import UbicacionRoutes from './routes/ubicacion.routes'
 
 export class App {
     app: Application;
@@ -28,7 +33,12 @@ export class App {
 
     private routes() {
         this.app.use(IndexRoutes);
-        this.app.use('/posts', PostRoutes);
+        this.app.use('/categoria', CategoriaRoutes);
+        this.app.use('/departamento', DepartamentoRoutes);
+        this.app.use('/municipio', MunicipioRoutes);
+        this.app.use('/producto', ProductoRoutes);
+        this.app.use('/sucursal', SucursalRoutes);
+        this.app.use('/ubicacion', UbicacionRoutes);
     }
 
     async listen(): Promise<void> {
