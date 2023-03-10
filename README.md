@@ -8,10 +8,6 @@ Para la ejecucion del frontend debe utilizarse el comando "npm start" en el dire
 # Anotaciones
 En la prueba no pude terminar los delete, ya que tendria que hacerse una eliminacion en cascada dadas las relaciones utilizadas, estas relaciones se utilizaron de esta manera por motivos de no tener datos repetidos en base de datos
 
-# Consideraciones
-El proyecto no se dejo con la opcion de poder Agregar, Modificar y "Eliminar" en la interfaz grafica por falta de tiempo, estos metodos estan realizados en la parte de backend, ya que pueden realizarse las peticiones por medio de postman o alguna herramienta para hacer peticiones POST y PUT, al editar la base de datos este cambio se vera reflejado en el servidor de react, la base de datos utilizada fue MySQL.
-
-
 # Preguntas prueba tecnica 
 
 ## Que tipo de declaraciones de variables conoce y cuales son sus diferencias
@@ -41,3 +37,7 @@ Aunque no sea un método también puede recorrerse un arreglo utilizando únicam
 
 Hay varias maneras, por ejemplo podríamos utilizar filter haciendo que el carácter que queramos eliminar no cumpla con la condición del filtro, pero también existen otras formas como por ejemplo la utilización de pop() o splice() que únicamente sirven para eliminar elementos de un arreglo según su índice. (en el caso de pop siempre es el índice "-1").
 
+
+
+# Consideraciones
+El proyecto no se dejo con la opcion de poder Agregar, Modificar y "Eliminar" en la interfaz grafica por falta de tiempo, estos metodos estan realizados en la parte de backend, ya que pueden realizarse las peticiones por medio de postman o alguna herramienta para hacer peticiones POST y PUT, al editar la base de datos este cambio se vera reflejado en el servidor de react, la base de datos utilizada fue MySQL.
