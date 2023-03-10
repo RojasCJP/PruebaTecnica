@@ -1,6 +1,9 @@
 # PruebaTecnica
 Prueba tecnica - Juan Pablo Rojas Chinchilla
 
+# Modelo entidad relacion
+![Alt Text](EntidadRelacion.png)
+
 # Ejecucion
 Para le ejecucion del backend debe utilizarse el comando "npm run dev" o en su defecto compilar el codigo de typescript y correr el servidor con node como usualmente se hace. El archivo de ejecucion es Node/dist/index.js.
 Para la ejecucion del frontend debe utilizarse el comando "npm start" en el directorio de React/prueba
