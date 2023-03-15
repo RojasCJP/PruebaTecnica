@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
+import EditFormModal from '../updates/update1';
 
-const Button = ({ name }) => {
-  return <button className='mx-1 btn btn-primary'>{name}</button>;
+const Button = ({ name, onClick }) => {
+  return <button className='mx-1 btn btn-primary' onClick={onClick}>{name}</button>;
 };
 
 const Table1 = () => {
   const [data, setData] = useState([]);
+  const [modal, setModal] = useState({ show: false, id: null });
 
   useEffect(() => {
     fetch('http://localhost:5000/categoria')
@@ -14,9 +16,22 @@ const Table1 = () => {
       .then(data => setData(data));
   }, []);
 
+  const handleSubmit = async (formData) => {
+    const response = await fetch(`http://localhost:5000/categoria/${modal.id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    });
+    const result = await response.json();
+    console.log(result);
+  }
+
   return (
-    <Table striped bordered hover responsive>
-      <thead>
+    <>
+      <Table striped bordered hover responsive>
+        <thead>
           <tr>
             <th>ID</th>
             <th>Nombre de categoria</th>
@@ -30,11 +45,23 @@ const Table1 = () => {
               <td>{item.id}</td>
               <td>{item.nombreCategoria}</td>
               <td>{item.descripcionCategoria}</td>
-              <td><Button name="Editar">Editar</Button></td>
+              <td>
+                <Button 
+                  name="Editar" 
+                  onClick={() => setModal({ show: true, id: item.id })} 
+                />
+              </td>
             </tr>
           ))}
         </tbody>
-    </Table>
+      </Table>
+      <EditFormModal 
+        show={modal.show} 
+        onSubmit={handleSubmit} 
+        handleClose={() => setModal({ show: false, id: null })} 
+        categoryId={modal.id} 
+      />
+    </>
   );
 };
 

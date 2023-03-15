@@ -1,15 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button, Modal, Form } from "react-bootstrap";
 
-const FormModal = ({ show, handleClose }) => {
+const EditModal = ({ show, handleClose, categoryId }) => {
   const [formData, setFormData] = useState({  });
+
+  useEffect(() => {
+    const fetchCategory = async () => {
+      try {
+        console.log(categoryId)
+        const response = await fetch(`http://localhost:5000/ubicacion/${categoryId}`);
+        const result = await response.json();
+        setFormData({
+          nombre: result.nombre,
+          descripcion: result.descripcion,
+        });
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchCategory();
+  }, [categoryId]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      console.log(formData)
-      const response = await fetch("http://localhost:5000/ubicacion", {
-        method: "POST",
+      const response = await fetch(`http://localhost:5000/ubicacion/${categoryId}`, {
+        method: "PUT",
         headers: {
           "Content-Type": "application/json",
         },
@@ -27,16 +44,10 @@ const FormModal = ({ show, handleClose }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleCloseModal = () => {
-    setFormData({    });
-    handleClose();
-  };
-
-  
   return (
     <Modal show={show} onHide={handleClose}>
-      <Modal.Header closeButton onClick={handleClose}>
-        <Modal.Title>Agregar Ubicacion</Modal.Title>
+      <Modal.Header closeButton>
+        <Modal.Title>Editar Ubicacion</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Form onSubmit={handleSubmit}>
@@ -59,7 +70,7 @@ const FormModal = ({ show, handleClose }) => {
             />
           </Form.Group>
           <Button variant="primary" type="submit">
-            Enviar
+            Guardar Cambios
           </Button>
         </Form>
       </Modal.Body>
@@ -67,4 +78,4 @@ const FormModal = ({ show, handleClose }) => {
   );
 };
 
-export default FormModal;
+export default EditModal;
