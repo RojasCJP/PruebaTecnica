@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 
+const Button = ({ name }) => {
+  return <button className='mx-1 btn btn-primary'>{name}</button>;
+};
 const Table6 = () => {
   const [data, setData] = useState([]);
 
@@ -17,6 +20,7 @@ const Table6 = () => {
             <th>ID</th>
             <th>Direccion</th>
             <th>Municipio al que pertenece</th>
+            <th>Editar</th>
           </tr>
         </thead>
         <tbody>
@@ -25,6 +29,7 @@ const Table6 = () => {
               <td>{item.id}</td>
               <td>{item.direccion}</td>
               <td>{item.idMunicipio}</td>
+              <td><Button name="Editar">Editar</Button></td>
             </tr>
           ))}
         </tbody>
